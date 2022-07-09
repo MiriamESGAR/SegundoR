@@ -1,0 +1,41 @@
+﻿@inject Microsoft.AspNetCore.Authorization.IAuthorizationService Authoriation
+
+@{ ViewData["Title"] = "Home Page"; }
+
+@{ var isAdmin = await Authoriation.AuthorizeAsync(User, null, "Admin"); }
+
+<div class="text-center">
+    <h1 class="display-4 text-primary">Productos</h1>
+    <h2>Fabrica de jabón "EL TORO" ofrece los siguientes productos.</h2>
+</div>
+
+
+<html>
+<body>
+    <p class="text-center">
+
+
+        <img src="~/media/productos/02657c1c-5189-45fc-a759-3a3c44eef597_Jabon carbon activado 100g.png" width="192" height="118" />
+        <img src="~/media/productos/0affeeb5-1e98-4ee2-a315-f50afce2cddd_Jabon aroma 400g.png" width="192" height="118" />
+        <img src="~/media/productos/53cf593d-500a-42c8-8e15-233dbd2273e3_Shampoo 475ml.png" width="192" height="118" />
+    </p>
+    <p class="text-center">
+        <img src="~/media/productos/669586e1-a5c2-4f59-8d30-4f3e0b20624c_Jabon hongos 100g.png" width="192" height="118" />
+        <img src="~/media/productos/6ee13034-6eb4-4bd9-b3be-8254591af796_Jabon coco 100g.png" width="192" height="118" />
+        <img src="~/media/productos/b9d9ba2b-eb3b-493b-9b94-c898e000bac5_Jabon aroma.png" width="192" height="118" />
+    </p>
+    <p class="text-center">
+        <img src="~/media/productos/783eb97e-5ef0-46b6-b970-0c0e36b2511d_Jabon Blanco.png" width="192" height="118" />
+        <img src="~/media/productos/e9e66a91-f009-45f8-8129-2bec02788b4c_Jabon blaco 400g.png" width="192" height="118" />
+        <img src="~/media/productos/perro.jpg" width="192" height="118" />
+    </p>
+
+    <p class="text-center">
+
+        <img src="~/media/productos/avena.jpg" width="192" height="118"/>
+        <img src="~/media/productos/lavanda.jpg" width="192" height="118"/>
+        <img src="~/media/productos/naranja.jpg" width="192" height="118" />
+    </p>
+</body>
+</html>
+       
